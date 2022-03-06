@@ -1,1 +1,206 @@
-%p Hello from '/'
+%nav.container-fluid
+  %ul
+    %li
+      %a{"aria-label" => "Back home", :href => "https://picocss.com"}
+    %li
+      %strong Pico
+      \.css
+  %ul
+    %li
+      %a.secondary{:href => "https://picocss.com#examples"} Examples
+    %li
+      %a.secondary{:href => "https://picocss.com/docs/"} Docs
+    %li
+      %a.contrast{"aria-label" => "Pico GitHub repository", :href => "https://github.com/picocss/pico"}
+%header
+  .container
+    %h1 Minimal CSS Framework for semantic HTML
+    %p
+      Elegant styles for all natives HTML elements without
+      %code .classes
+      and dark mode automatically enabled.
+    %p
+      %a.secondary{"aria-label" => "Documentation", :href => "docs/", :role => "button"} Get started
+      %a.contrast.outline{"aria-label" => "Download", :href => "https://github.com/picocss/pico/archive/refs/heads/master.zip", :role => "button"} Download
+    %p
+      %code
+        %small Less than 10 kB minified and gzipped
+%main
+  %section#demo{"aria-label" => "Demo"}
+    .container
+      %article{"aria-label" => "Rendered demo", "data-theme" => "light"}
+        #render
+          %form{"aria-busy" => "true"}
+        %pre
+          %code#code
+  %section#principles
+    .container
+      %hgroup
+        %h2 Let’s keep the webdesign graceful and simple!
+        %h3 With just the right amount of everything, Pico is great starting point for a clean and lightweight design system.
+      .grid
+        %div
+          %h4 Class-light and semantic
+          %p We use simple native HTML tags as much as possible. Less than 10 .classes are used in Pico.
+        %div
+          %h4 Great styles with just CSS
+          %p No dependencies, package manager, external files, or JavaScript.
+        %div
+          %h4 Responsive everything
+          %p Elegant and consistent adaptive spacings and typography on all devices.
+        %div
+          %h4 Light or Dark mode
+          %p Shipped with two beautiful color themes, automatically enabled according to the user preference.
+  %section#examples{"data-theme" => "light"}
+    .container
+      %hgroup
+        %h2 Examples
+        %h3 Minimalist templates to discover Pico in action.
+      .grid
+        %div
+          %a{:href => "examples/preview/"}
+            %small Preview
+            .example.preview
+              .desktop
+              .mobile
+          %p
+            %small A starter example with all elements and components used in Pico
+        %div
+          %a{:href => "examples/classless/"}
+            %small Class-less
+            .example.classless
+              .desktop
+              .mobile
+          %p
+            %small
+              Just a pure semantic HTML markup, without
+              %code .classes
+        %div
+          %a{:href => "examples/basic-template/"}
+            %small Basic template
+            .example.basic-template
+              .desktop
+              .mobile
+          %p
+            %small A basic custom template for Pico using only CSS custom properties (variables)
+        %div
+          %a{:href => "examples/company/"}
+            %small Company
+            .example.company
+              .desktop
+              .mobile
+          %p
+            %small A classic company or blog layout with a sidebar
+        %div
+          %a{:href => "examples/google-amp/"}
+            %small Google Amp
+            .example.google-amp
+              .desktop
+              .mobile
+          %p
+            %small A simple layout for Google Amp, with inlined CSS
+        %div
+          %a{:href => "examples/sign-in/"}
+            %small Sign in
+            .example.sign-in
+              .desktop
+              .mobile
+          %p
+            %small A minimalist layout for Login pages
+  %section#why
+    .container
+      %hgroup
+        %h2 More Code, More Problems
+        %h3 A great design should be minimal, fast and maintainable.
+      %ul.check
+        %li
+          Most popular CSS frameworks are bulky, overkill and hard to customize without
+          %em hyper-overriding
+          styles.
+        %li Huge stackings of wrappers and CSS classes are unnecessary for semantics elements.
+        %li Large and complex CSS file increase memory usage and cause longer style calculations.
+        %li Basics HTML elements should not require packaging large amount of dependencies.
+      %div{"data-theme" => "invalid"}
+        %pre
+          %code
+            \<
+            %b form
+            = succeed "=" do
+              %i class
+            = succeed ">" do
+              %u "form form-modifier margin padding align"
+            %b div
+            = succeed "=" do
+              %i class
+            = succeed ">" do
+              %u "input-wrapper input-wrapper-modifier margin padding"
+            %b input
+            = succeed "=" do
+              %i type
+            %u "text"
+            = succeed "=" do
+              %i class
+            = succeed ">" do
+              %u "input input-type-modifier input-style-modifier input-size-modifier"
+            = succeed ">" do
+              %b div
+            %b button
+            = succeed "=" do
+              %i type
+            = succeed "\"" do
+              %u "submit
+            = succeed "=" do
+              %i class
+            = succeed ">" do
+              %u "button button-style-modifier button-size-modifier action-trigger margin padding"
+            = succeed ">" do
+              %b button
+            = succeed ">" do
+              %b form
+      %div{"data-theme" => "valid"}
+        %pre
+          %code
+            \<
+            %b> form
+            \>
+            \<
+            %b input
+            = succeed "=" do
+              %i type
+            = succeed ">" do
+              %u "text"
+            %b button
+            = succeed "=" do
+              %i type
+            = succeed ">Action</" do
+              %u "submit"
+            = succeed ">" do
+              %b button
+            = succeed ">" do
+              %b form
+  %section#star{"aria-label" => "Star Pico on GitHub", "data-theme" => "light"}
+    .container
+      %p
+        Give us a Star on GitHub:
+        %iframe{:frameborder => "0", :height => "30", :scrolling => "0", :src => "https://ghbtns.com/github-btn.html?user=picocss&repo=pico&type=star&count=true&size=large", :title => "GitHub", :width => "160"}
+%footer
+  .container
+    %ul
+      %li
+        %a.contrast{:href => "https://picocss.com/#examples"} Examples
+      %li
+        %a.contrast{:href => "https://picocss.com/docs/"} Documentation
+      %li
+        %a.contrast{:href => "https://github.com/picocss/pico"} GitHub
+    %ul
+      %li
+        %small
+          Made by
+          %a.secondary{:href => "https://lucaslarroche.com/"} Lucas Larroche
+      %li
+        %small
+          Code licensed
+          %a.secondary{:href => "https://github.com/picocss/pico/blob/master/LICENSE.md"} MIT
+      %li
+        %small
+          %a.secondary{:href => "https://picocss.com/third-party/"} Third-Party Tools
