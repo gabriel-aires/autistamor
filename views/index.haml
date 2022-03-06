@@ -120,64 +120,6 @@
         %li Huge stackings of wrappers and CSS classes are unnecessary for semantics elements.
         %li Large and complex CSS file increase memory usage and cause longer style calculations.
         %li Basics HTML elements should not require packaging large amount of dependencies.
-      %div{"data-theme" => "invalid"}
-        %pre
-          %code
-            \<
-            %b form
-            = succeed "=" do
-              %i class
-            = succeed ">" do
-              %u "form form-modifier margin padding align"
-            %b div
-            = succeed "=" do
-              %i class
-            = succeed ">" do
-              %u "input-wrapper input-wrapper-modifier margin padding"
-            %b input
-            = succeed "=" do
-              %i type
-            %u "text"
-            = succeed "=" do
-              %i class
-            = succeed ">" do
-              %u "input input-type-modifier input-style-modifier input-size-modifier"
-            = succeed ">" do
-              %b div
-            %b button
-            = succeed "=" do
-              %i type
-            = succeed "\"" do
-              %u "submit
-            = succeed "=" do
-              %i class
-            = succeed ">" do
-              %u "button button-style-modifier button-size-modifier action-trigger margin padding"
-            = succeed ">" do
-              %b button
-            = succeed ">" do
-              %b form
-      %div{"data-theme" => "valid"}
-        %pre
-          %code
-            \<
-            %b> form
-            \>
-            \<
-            %b input
-            = succeed "=" do
-              %i type
-            = succeed ">" do
-              %u "text"
-            %b button
-            = succeed "=" do
-              %i type
-            = succeed ">Action</" do
-              %u "submit"
-            = succeed ">" do
-              %b button
-            = succeed ">" do
-              %b form
   %section#star{"aria-label" => "Star Pico on GitHub", "data-theme" => "light"}
     .container
       %p
