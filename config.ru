@@ -7,6 +7,7 @@ require "ohm"
 
 #configuration
 Cuba.use Rack::Session::Cookie, :secret => "|HU¨%$j89jafdiojiH*H#ld(@Çççd~O@!Q)"
+Cuba.use Rack::Static, :urls => ["/css", "/js", "/img"], :root => "./assets"
 Cuba.plugin Cuba::Safe
 Cuba.plugin Cuba::Render
 Cuba.settings[:render][:template_engine] = "haml"
@@ -20,9 +21,11 @@ Dir[GLOB].each { |file| require file }
 
 #mount controllers
 Cuba.define do
+
   on default do
     run Home
   end
+
 end
 
 #start server
