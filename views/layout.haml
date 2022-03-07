@@ -43,9 +43,10 @@
           - ["Github", "Instagram", "Facebook", "LinkedIn", "Twitter"].each do |social|
             %li
               %a{:href => "#"}
-                %img{src: "/img/#{social.downcase}.svg", height: "1.8rem", width: "1.8rem"}
+                %img{src: "/img/#{social.downcase}.svg", height: "20px", width: "20px"}
                 = social
-            %li.line │
-            
+            %li.line
+              = "│" unless social == "Twitter"
+
         %hr.small/
         %p © 2022
