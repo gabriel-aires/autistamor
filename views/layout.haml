@@ -10,11 +10,11 @@
     %script{type: "text/javascript", src: "/js/htmx.min.js"}
 
   %body.index
-    .row.header
+    .row.header.bg-black.light-text
       .section
         %nav
           %a.logo{:href => "/"}
-            %img{:alt => "Logo", :src => "img/logo-gray.png"}/
+            %img{:alt => "Logo", :src => "img/logo.png"}/
           %label#menu-toggle-label{:for => "menu-toggle"}
           %input#menu-toggle{:type => "checkbox"}/
           .icon-menu
@@ -24,15 +24,18 @@
             %li
               %a{:href => "#"} Autista...
             %li
-              %a{:href => "layouts/"} ...Amor
+              %a{:href => "#"} ...Amor
             %li
-              %a{:href => "components/"} Contato
+              %a{:href => "#"} Contato
+
     .contents
-      .row.hero.bg-black
-        .section.narrow.center
-          %img{src: "/img/logo-black.png"}
-          %hr.small.opacity-4/
-          %h1 Autistamor
+      .row.hero.bg-blue
+        .section.center.autogrid.padded
+          .col
+            %img{src: "/img/favicon.png"}
+            %h1 Autistamor
+          .col
+            %h2 Informação e entretenimento para quem pensa fora da caixa S2
       .page
         != content
 
