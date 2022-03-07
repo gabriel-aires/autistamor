@@ -31,7 +31,7 @@
     .contents
       .row.hero.bg-blue.light-text
         .section.center
-          %img{src: "/img/favicon.png", height: "200px", width: "200px"}
+          %img{src: "/img/favicon.png", height: "200px", width: "200px"}/
           %h1 Autistamor
       .page
         != content
@@ -40,19 +40,12 @@
       .section
         %i.icon-vital.i3x
         %ul
-          %li
-            %a{:href => "#"} Github
-          %li.line │
-          %li
-            %a{:href => "#"} Instagram
-          %li.line │
-          %li
-            %a{:href => "#"} Facebook
-          %li.line │
-          %li
-            %a{:href => "#"} Quora
-          %li.line │
-          %li
-            %a{:href => "#"} Twitter
+          - ["Github", "Instagram", "Facebook", "LinkedIn", "Twitter"].each do |social|
+            %li
+              %a{:href => "#"}
+                %img{src: "/img/#{social.downcase}.svg", height: "1.8rem", width: "1.8rem"}
+                = social
+            %li.line │
+            
         %hr.small/
         %p © 2022
