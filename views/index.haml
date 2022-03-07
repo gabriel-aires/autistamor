@@ -1,148 +1,86 @@
-%nav.container-fluid
-  %ul
-    %li
-      %a{"aria-label" => "Back home", :href => "https://picocss.com"}
-    %li
-      %strong Pico
-      \.css
-  %ul
-    %li
-      %a.secondary{:href => "https://picocss.com#examples"} Examples
-    %li
-      %a.secondary{:href => "https://picocss.com/docs/"} Docs
-    %li
-      %a.contrast{"aria-label" => "Pico GitHub repository", :href => "https://github.com/picocss/pico"}
-%header
-  .container
-    %h1 Minimal CSS Framework for semantic HTML
+.row
+  .section.narrow.center
+    %h1 Minimal
+    %hr.red.small/
+    %h3.centered-text Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
+#simple.row.bg
+  .section.center
+    %h1 Simple
+    %hr.red.small/
+    .autogrid.padded
+      .col
+        %img.b-lazy.full{"data-src" => "images/demo/spring-8fb8662b.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+        %h2 Flexible
+        %p
+          Vital is built with
+          = succeed "," do
+            %a{:href => "http://sass-lang.com/", :target => "_blank"} Sass
+      .col
+        %img.b-lazy.full{"data-src" => "images/demo/code-3561b54a.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+        %h2 Readable
+        %p No ridiculous amounts of classes or nesting. No excessively buried code.
+      .col
+        %img.b-lazy.full{"data-src" => "images/demo/expand-55e0a069.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+        %h2 Scalable
+        %p
+          Written almost entirely in
+          = succeed "values," do
+            %code em
+#light.row
+  .section.center
+    %img.b-lazy.full{"data-src" => "images/demo/feather-5b77d91f.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+    %h1 Light as a feather
+    %hr.red.small/
+    %p At a total size of just 23 KB minified or 6 KB gzipped, Vital loads and renders quickly.
+    .narrow
+      .autogrid.stats
+        .col
+          %h1
+            23
+            %span KB
+          %hr.small/
+          %p
+            CSS framework
+            %br/
+            %small.gray-medium 6 KB gzipped!
+        .col
+          %h1
+            0
+            %span KB
+          %hr.small/
+          %p
+            No javascript
+            %br/
+            %small.gray-medium No problems!
+#productive.row.bg-blue
+  .section.padded.light-text
+    .col-1-2
+      %img.b-lazy{"data-src" => "images/demo/chart-16d9bf46.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+      %h1 Less is more
+      %p Traditional CSS frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are fewer bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
+    .col-1-2
+      %img.b-lazy{"data-src" => "images/demo/hammer-32d5de5b.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+      %h1 Regain productivity
+      %p Often times a large CSS framework is used to speed up the time to market or to enforce consistency, but when a project grows beyond the initial scope of a concept, development becomes more difficult and time consuming. Vital reduces workflow inefficiencies because there is less to learn and maintain.
+    .clear
+#devices.row.bg
+  .section.center
+    %h1 Vast device support
+    %hr.red.small/
+    %p.centered-text Vital is a true cross-platform, mobile-first framework. Elements such as select boxes, checkboxes and radios render consistently across different platforms while gracefully degrading on legacy.
+    %img.b-lazy.full{"data-src" => "images/demo/devices-2e35e67f.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+#open-source.row.bg-black
+  .section.narrow.center.light-text
+    %img.b-lazy{"data-src" => "images/demo/open-source-a15fb366.svg", :src => "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}/
+    %h1 Open Source
+    %hr.small.opacity-2/
     %p
-      Elegant styles for all natives HTML elements without
-      %code .classes
-      and dark mode automatically enabled.
+      Vital is developed and maintained by
+      = succeed "." do
+        %a{:href => "https://doximity.com", :target => "_blank"} Doximity
+      = succeed "." do
+        %a{:href => "https://github.com/doximity/vital", :target => "_blank"} GitHub
+.row.bg-orange
+  .section.narrow.center
     %p
-      %a.secondary{"aria-label" => "Documentation", :href => "docs/", :role => "button"} Get started
-      %a.contrast.outline{"aria-label" => "Download", :href => "https://github.com/picocss/pico/archive/refs/heads/master.zip", :role => "button"} Download
-    %p
-      %code
-        %small Less than 10 kB minified and gzipped
-%main
-  %section#demo{"aria-label" => "Demo"}
-    .container
-      %article{"aria-label" => "Rendered demo", "data-theme" => "light"}
-        #render
-          %form{"aria-busy" => "true"}
-        %pre
-          %code#code
-  %section#principles
-    .container
-      %hgroup
-        %h2 Let’s keep the webdesign graceful and simple!
-        %h3 With just the right amount of everything, Pico is great starting point for a clean and lightweight design system.
-      .grid
-        %div
-          %h4 Class-light and semantic
-          %p We use simple native HTML tags as much as possible. Less than 10 .classes are used in Pico.
-        %div
-          %h4 Great styles with just CSS
-          %p No dependencies, package manager, external files, or JavaScript.
-        %div
-          %h4 Responsive everything
-          %p Elegant and consistent adaptive spacings and typography on all devices.
-        %div
-          %h4 Light or Dark mode
-          %p Shipped with two beautiful color themes, automatically enabled according to the user preference.
-  %section#examples{"data-theme" => "light"}
-    .container
-      %hgroup
-        %h2 Examples
-        %h3 Minimalist templates to discover Pico in action.
-      .grid
-        %div
-          %a{:href => "examples/preview/"}
-            %small Preview
-            .example.preview
-              .desktop
-              .mobile
-          %p
-            %small A starter example with all elements and components used in Pico
-        %div
-          %a{:href => "examples/classless/"}
-            %small Class-less
-            .example.classless
-              .desktop
-              .mobile
-          %p
-            %small
-              Just a pure semantic HTML markup, without
-              %code .classes
-        %div
-          %a{:href => "examples/basic-template/"}
-            %small Basic template
-            .example.basic-template
-              .desktop
-              .mobile
-          %p
-            %small A basic custom template for Pico using only CSS custom properties (variables)
-        %div
-          %a{:href => "examples/company/"}
-            %small Company
-            .example.company
-              .desktop
-              .mobile
-          %p
-            %small A classic company or blog layout with a sidebar
-        %div
-          %a{:href => "examples/google-amp/"}
-            %small Google Amp
-            .example.google-amp
-              .desktop
-              .mobile
-          %p
-            %small A simple layout for Google Amp, with inlined CSS
-        %div
-          %a{:href => "examples/sign-in/"}
-            %small Sign in
-            .example.sign-in
-              .desktop
-              .mobile
-          %p
-            %small A minimalist layout for Login pages
-  %section#why
-    .container
-      %hgroup
-        %h2 More Code, More Problems
-        %h3 A great design should be minimal, fast and maintainable.
-      %ul.check
-        %li
-          Most popular CSS frameworks are bulky, overkill and hard to customize without
-          %em hyper-overriding
-          styles.
-        %li Huge stackings of wrappers and CSS classes are unnecessary for semantics elements.
-        %li Large and complex CSS file increase memory usage and cause longer style calculations.
-        %li Basics HTML elements should not require packaging large amount of dependencies.
-  %section#star{"aria-label" => "Star Pico on GitHub", "data-theme" => "light"}
-    .container
-      %p
-        Give us a Star on GitHub:
-        %iframe{:frameborder => "0", :height => "30", :scrolling => "0", :src => "https://ghbtns.com/github-btn.html?user=picocss&repo=pico&type=star&count=true&size=large", :title => "GitHub", :width => "160"}
-%footer
-  .container
-    %ul
-      %li
-        %a.contrast{:href => "https://picocss.com/#examples"} Examples
-      %li
-        %a.contrast{:href => "https://picocss.com/docs/"} Documentation
-      %li
-        %a.contrast{:href => "https://github.com/picocss/pico"} GitHub
-    %ul
-      %li
-        %small
-          Made by
-          %a.secondary{:href => "https://lucaslarroche.com/"} Lucas Larroche
-      %li
-        %small
-          Code licensed
-          %a.secondary{:href => "https://github.com/picocss/pico/blob/master/LICENSE.md"} MIT
-      %li
-        %small
-          %a.secondary{:href => "https://picocss.com/third-party/"} Third-Party Tools
+      %a.btn.white.round.large{:href => "get-started/"} Get Started using Vital

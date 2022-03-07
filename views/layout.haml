@@ -1,12 +1,58 @@
 !!! 5
 %html{:lang => 'en'}
-    %head
-        %meta{content: 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
-        %meta{name: :viewport, content: 'width=device-width,initial-scale=1'}
-        %title= !!@title ? "Autistamor - #{@title}" : "Autistamor"
-        %link{rel: "stylesheet", href: "/css/pico.min.css", type: "text/css"}
-        %link{rel: "icon", type:"image/x-icon", href:"/img/favicon.ico"}
-        %script{type: "text/javascript", src: "/js/htmx.min.js"}
+  %head
+    %meta{content: 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
+    %meta{:charset => "UTF-8"}/
+    %meta{name: :viewport, content: 'width=device-width,initial-scale=1'}
+    %title= !!@title ? "Autistamor - #{@title}" : "Autistamor"
+    %link{rel: "stylesheet", href: "/css/vital.min.css", type: "text/css"}
+    %link{rel: "icon", type:"image/x-icon", href:"/img/favicon.ico"}
+    %script{type: "text/javascript", src: "/js/htmx.min.js"}
 
-    %body.dark
+  %body.index
+    .row.header
+      .section
+        %nav
+          %a.logo{:href => "/"}
+            %img{:alt => "Logo", :src => "img/logo-gray.png"}/
+          %label#menu-toggle-label{:for => "menu-toggle"}
+          %input#menu-toggle{:type => "checkbox"}/
+          .icon-menu
+          %ul.menu
+            %li
+              %a{:href => "#"} Sobre
+            %li
+              %a{:href => "#"} Autista...
+            %li
+              %a{:href => "layouts/"} ...Amor
+            %li
+              %a{:href => "components/"} Contato
+    .contents
+      .row.hero.bg-black
+        .section.narrow.center
+          %img{src: "/img/logo-black.png"}
+          %hr.small.opacity-4/
+          %h1 Autistamor
+      .page
         != content
+
+    .row.footer.center
+      .section
+        %i.icon-vital.i3x
+        %ul
+          %li
+            %a{:href => "#"} Github
+          %li.line │
+          %li
+            %a{:href => "#"} Instagram
+          %li.line │
+          %li
+            %a{:href => "#"} Facebook
+          %li.line │
+          %li
+            %a{:href => "#"} Quora
+          %li.line │
+          %li
+            %a{:href => "#"} Twitter
+        %hr.small/
+        %p © 2022
