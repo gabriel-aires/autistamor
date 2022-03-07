@@ -36,14 +36,14 @@
       .page
         != content
 
-    .row.footer.center
+    .row.footer.center.bg-black.light-text
       .section
         %i.icon-vital.i3x
         %ul
           - ["Github", "Instagram", "Facebook", "LinkedIn", "Twitter"].each do |social|
             %li
               %a{:href => "#"}
-                %img{src: "/img/#{social.downcase}.svg", height: "20px", width: "20px"}
+                %img{src: "/img/#{social.downcase}-light.svg", height: "20px", width: "20px"}
                 = social
             %li.line
               = "│" unless social == "Twitter"

@@ -19,8 +19,8 @@
         %h2 Seção 3
         %p Resumo
 
-.row.bg-default
-  .section.padded.light-text
+.row.bg-orange.light-text
+  .section.padded
     .col-1-2
       %h1 Artigo 1
       %p Resumo .................. ...................... .................. ................. .................
@@ -36,7 +36,14 @@
     %p
       Comentário ................. ............ ............. ........... ................
       %a.small.gray-medium{:href => "#", :target => "_blank"} de Pessoa35.
-.row.bg-black
-  .section.narrow.center
-    %p
-      %a.btn.white.round.large{:href => "#"} Inscreva-se!
+.row.bg-default
+  .section.narrow.center.full-width-forms
+    %form.padded
+      .col-2-3
+        %br/
+        %input{type: "text", name: "email", placeholder: "Insira seu e-mail"}
+      .col-1-3
+        %br/
+        %input.btn.white{type: "submit", value: "Inscreva-se!"}
+      .clear
+      %br/
