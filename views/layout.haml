@@ -10,7 +10,7 @@
     %script{type: "text/javascript", src: "/js/htmx.min.js"}
 
   %body.index
-    .row.header.bg-black.light-text
+    .row.header
       .section
         %nav
           %a.logo{:href => "/"}
@@ -32,10 +32,11 @@
       .row.hero.bg-blue
         .section.center.autogrid.padded
           .col
-            %img{src: "/img/favicon.png"}
-            %h1 Autistamor
+            %img{src: "/img/favicon.png", height: "200px", width: "200px"}
           .col
-            %h2 Informação e entretenimento para quem pensa fora da caixa S2
+            %h1 Autistamor
+            %hr.small/
+            %p Informação e entretenimento para quem pensa fora da caixa S2
       .page
         != content
 
