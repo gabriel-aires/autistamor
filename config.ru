@@ -6,6 +6,8 @@ require "cuba/safe"
 require "cuba/render"
 require "hamlit"
 require "ohm"
+require "scrivener"
+require "scrypt"
 
 # Define environment
 RACK_ENV = ENV['RACK_ENV'] ||= 'development'
@@ -23,15 +25,15 @@ Cuba.settings[:render][:layout] = "layout"
 Ohm.redis = Redic.new REDIS_SERVER
 
 #load sources
-GLOB = "./{models,controllers}/*.rb"
+GLOB = "./{models,filters,controllers}/*.rb"
 Dir[GLOB].each { |file| require file }
 
 #mount controllers
 Cuba.define do
 
-  on default do
-    run Home
-  end
+  on "sessions" { run Sessions  }
+  on "admin"    { run Admin     }
+  on default    { run Home      }
 
 end
 

@@ -10,10 +10,8 @@ gem 'ohm'
 gem 'scrivener'
 gem 'iodine'
 gem 'pony'
-gem 'pagy'
 gem 'sucker_punch'
-gem 'rbnacl'
-gem 'argon2'
+gem 'scrypt'
 gem 'rqrcode'
 gem 'date'
 gem 'bigdecimal'
@@ -22,13 +20,13 @@ gem 'logger'
 gem 'rack-protection', :require => 'rack/protection'
 
 group 'development' do
-    gem 'rubocop'
-    gem 'pry'
-    gem 'shotgun'
-    gem 'thin'
+  gem 'rubocop'
+  gem 'pry'
+  gem 'shotgun'
+  gem 'thin'
 end
 
 group 'test' do
-    gem 'minitest', :require => 'minitest/autorun'
-    gem 'capybara'
+  gem 'minitest', :require => 'minitest/autorun'
+  gem 'capybara'
 end

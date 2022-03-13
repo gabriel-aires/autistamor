@@ -5,6 +5,7 @@ class Post < Ohm::Model
   attribute :created_at
   attribute :updated_at
   attribute :deleted_at
+  counter :likes
   unique :title
   collection :attachments, :Attachment
   collection :assignments, :Assignment
