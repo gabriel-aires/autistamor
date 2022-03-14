@@ -1,6 +1,5 @@
 # Load dependences first
 require "dotenv/load"
-require "sucker_punch"
 require "cuba"
 require "cuba/safe"
 require "cuba/render"
