@@ -2,8 +2,8 @@ class Sessions < Cuba; end
 
 Sessions.define do
   on get do
-    on root do
-      # todo
+    on "login", root do
+      render "sessions/login"
     end
   end
 end

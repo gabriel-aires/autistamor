@@ -1,49 +1,53 @@
-.row.notice
-  .section.narrow.center
-    %h1 Subtítulo
-    %hr.red.small/
-    %h3.centered-text Descrição ...........................
-.row.bg
-  .section.center
-    %h1 Seções
-    %hr.red.small/
-    .autogrid.padded
-      .col
-        %h2 Seção 1
-        %p
-          Resumo
-      .col
-        %h2 Seção 2
-        %p Resumo
-      .col
-        %h2 Seção 3
-        %p Resumo
+/ A wrapper for all the blog posts
 
-.row.bg-orange.light-text
-  .section.padded
-    .col-1-2
-      %h1 Artigo 1
-      %p Resumo .................. ...................... .................. ................. .................
-    .col-1-2
-      %h1 Artigo 2
-      %p Resumo .................. ...................... .................. ................. .................
-    .clear
-
-.row
-  .section.narrow.center
-    %h1 Feedback
-    %hr.small.opacity-2/
-    %p
-      Comentário ................. ............ ............. ........... ................
-      %a.small.gray-medium{:href => "#", :target => "_blank"} de Pessoa35.
-.row.bg-default
-  .section.narrow.center.full-width-forms
-    %form.padded
-      .col-2-3
-        %br/
-        %input{type: "text", name: "email", placeholder: "Insira seu e-mail"}
-      .col-1-3
-        %br/
-        %input.btn.white{type: "submit", value: "Inscreva-se!"}
-      .clear
-      %br/
+.posts
+  %h1.content-subhead Pinned Post
+  / A single blog post
+  %section.post
+    %header.post-header
+      %img.post-avatar{:alt => "Tilo Mitra's avatar", :height => "48", :src => "/img/common/tilo-avatar.png", :width => "48"}/
+      %h2.post-title Welcome to Pure
+      %p.post-meta
+        By
+        %a.post-author{:href => "#"} Tilo Mitra
+        under
+        %a.tag{:href => "#"} CSS
+        %a.tag{:href => "#"} Pure
+    .post-description
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+.posts
+  %h1.content-subhead Recent Posts
+  %section.post
+    %header.post-header
+      %img.post-avatar{:alt => "Eric Ferraiuolo's avatar", :height => "48", :src => "/img/common/ericf-avatar.png", :width => "48"}/
+      %h2.post-title Everything You Need to Know About Node.js
+      %p.post-meta
+        By
+        %a.post-author{:href => "#"} Eric Ferraiuolo
+        under
+        %a.tag{:href => "#"} JavaScript
+    .post-description
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  %section.post
+    %header.post-header
+      %img.post-avatar{:alt => "Reid Burke's avatar", :height => "48", :src => "/img/common/reid-avatar.png", :width => "48"}/
+      %h2.post-title Photos from CSSConf and JSConf
+      %p.post-meta
+        By
+        %a.post-author{:href => "#"} Reid Burke
+        under
+        %a.tag{:href => "#"} Uncategorized
+    .post-description
+      .post-images.g
+        .u-1.u-md-1-2
+          %a{:href => "http://www.flickr.com/photos/uberlife/8915936174/"}
+            %img.img-responsive{:alt => "Photo of someone working poolside at a resort", :src => "http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg"}/
+          .post-image-meta
+            %h3 CSSConf Photos
+        .u-1.u-md-1-2
+          %a{:href => "http://www.flickr.com/photos/uberlife/8907351301/"}
+            %img.img-responsive{:alt => "Photo of the sunset on the beach", :src => "http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg"}/
+          .post-image-meta
+            %h3 JSConf Photos

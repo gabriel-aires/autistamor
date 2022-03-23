@@ -30,9 +30,9 @@ Dir[GLOB].each { |file| require file }
 #mount controllers
 Cuba.define do
 
-  on "sessions" { run Sessions  }
-  on "admin"    { run Admin     }
-  on default    { run Home      }
+  #on "sessions" do run Sessions; end
+  #on "admin"    do run Admin   ; end
+  on default    do run Home    ; end
 
 end
 

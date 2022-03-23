@@ -1,52 +1,60 @@
-!!! 5
-%html{:lang => 'en'}
+!!!
+%html{:lang => "en"}
   %head
-    %meta{content: 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
-    %meta{:charset => "UTF-8"}/
-    %meta{name: :viewport, content: 'width=device-width,initial-scale=1'}
-    %title= !!@title ? "Autistamor - #{@title}" : "Autistamor"
-    %link{rel: "stylesheet", href: "/css/vital.min.css", type: "text/css"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => @description, :name => "description"}
+    %title= @title
     %link{rel: "icon", type:"image/x-icon", href:"/img/favicon.ico"}
+    %link{:href => "/css/pure-custom.css", :rel => "stylesheet"}
+    %link{:href => "/css/grids-custom.css", :rel => "stylesheet"}
+    %link{:href => "/css/site.css", :rel => "stylesheet"}
     %script{type: "text/javascript", src: "/js/htmx.min.js"}
 
-  %body.index
-    .row.header
-      .section
-        %nav
-          %a.logo{:href => "/"}
-            %img{:alt => "Logo", :src => "img/logo.png"}/
-          %label#menu-toggle-label{:for => "menu-toggle"}
-          %input#menu-toggle{:type => "checkbox"}/
-          .icon-menu
-          %ul.menu
-            %li
-              %a{:href => "#"} Sobre
-            %li
-              %a{:href => "#"} Autista...
-            %li
-              %a{:href => "#"} ...Amor
-            %li
-              %a{:href => "#"} Contato
+  %body
+    #layout.g
+      .sidebar.u-1.u-md-1-4
+        .header
+          %img.img{ src: "img/favicon-alt.png" }
+          %h1.brand-title= @title
+          %h2.brand-tagline= @description
+          %nav.nav
+            %ul.nav-list
+              %li.nav-item
+                %a{:href => "#"} Início
+              %li.nav-item
+                %a{:href => "#"} Sobre
+              %li.nav-item
+                %a{:href => "#"} Contato
 
-    .contents
-      .row.hero.bg-blue.light-text
-        .section.center
-          %img{src: "/img/favicon.png", height: "200px", width: "200px"}/
-          %h1 Autistamor
-      .page
-        != content
+      .content.u-1.u-md-3-4
+        %div
+          != content
 
-    .row.footer.center.bg-black.light-text
-      .section
-        %i.icon-vital.i3x
-        %ul
-          - ["Github", "Instagram", "Facebook", "LinkedIn", "Twitter"].each do |social|
-            %li
-              %a{:href => "#"}
-                %img{src: "/img/#{social.downcase}-light.svg", height: "20px", width: "20px"}
-                = social
-            %li.line
-              = "│" unless social == "Twitter"
+          .footer
+            .menu.menu-horizontal
+              %ul
+                %li.menu-item
+                  %a.menu-link{:href => "http://purecss.io/"}
+                    %img{src: "/img/github.svg", height: "20px", width: "20px"}
+                    Github
 
-        %hr.small/
-        %p © 2022
+                %li.menu-item
+                  %a.menu-link{:href => "http://github.com/pure-css/pure/"}
+                    %img{src: "/img/instagram.svg", height: "20px", width: "20px"}
+                    Instagram
+
+                %li.menu-item
+                  %a.menu-link{:href => "http://github.com/pure-css/pure/"}
+                    %img{src: "/img/facebook.svg", height: "20px", width: "20px"}
+                    Facebook
+
+                %li.menu-item
+                  %a.menu-link{:href => "http://github.com/pure-css/pure/"}
+                    %img{src: "/img/linkedin.svg", height: "20px", width: "20px"}
+                    LinkedIn
+
+                %li.menu-item
+                  %a.menu-link{:href => "http://github.com/pure-css/pure/"}
+                    %img{src: "/img/twitter.svg", height: "20px", width: "20px"}
+                    Twitter
