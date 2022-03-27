@@ -1,17 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'dotenv'
-gem 'rake'
-gem 'cuba'
-gem 'tilt'
+gem 'tipi'
+gem 'sinatra'
 gem 'hamlit'
-gem 'ohm'
-gem 'scrivener'
-gem 'iodine'
+gem 'sequel'
+gem 'extralite-bundle'
 gem 'scrypt'
-
-group 'development' do
-  gem 'irb'
-  gem 'guard-rack'
-  gem 'thin'
-end
